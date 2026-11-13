@@ -12,8 +12,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="./assets/도형 방어-D8DyT21U.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/도형 방어-BJNutRkU.css">
+  <script type="module" crossorigin src="./assets/도형 방어-Bf_xmy6x.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/도형 방어-D3nn0qh5.css">
 </head>
 <body>
 <div class="app">
@@ -51,6 +51,15 @@
         <div><span>처치</span><span id="rKills">0</span></div>
         <div><span>보스 처치</span><span id="rBoss">0</span></div>
         <div><span>고른 카드</span><span id="rCards">0</span></div>
+      </div>
+      <div class="rank hidden" id="rankBox">
+        <form class="rank-form" id="rankForm" novalidate>
+          <input id="rankName" maxlength="12" placeholder="닉네임" autocomplete="off" enterkeyhint="send" aria-label="닉네임" aria-describedby="rankNote">
+          <button class="btn-sub" id="rankSubmit" type="submit">랭킹 등록</button>
+        </form>
+        <p class="rank-note" id="rankNote" aria-live="polite">닉네임은 공개돼요. 실명이나 연락처는 넣지 마세요.</p>
+        <ol class="rank-list" id="rankList" aria-label="랭킹"></ol>
+        <p class="rank-me" id="rankMe"></p>
       </div>
       <div class="btn-row">
         <button class="btn-main" id="retryBtn">다시 하기</button>
