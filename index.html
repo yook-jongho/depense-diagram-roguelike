@@ -12,8 +12,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="./assets/도형 방어-D_izI2zO.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/도형 방어-DtJK3zI9.css">
+  <script type="module" crossorigin src="./assets/도형 방어-DpUi0MzC.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/도형 방어-B801xyGt.css">
 </head>
 <body>
 <div class="app">
@@ -37,7 +37,11 @@
     <canvas id="cv"></canvas>
     <div class="overlay" id="startOv">
       <h1>도형 방어</h1>
-      <p>사방에서 다가오는 도형을 원 안에서 자동으로 공격합니다. 골드로 능력치를 올리고, 웨이브를 넘길 때마다 카드 3장 중 1장을 골라 스킬을 모으세요. 200웨이브를 버티면 승리합니다.</p>
+      <p class="intro">
+        <span>사방에서 다가오는 도형을 원&nbsp;안에서 자동으로 공격합니다.</span>
+        <span>골드로 능력치를 올리고,<br>웨이브를 넘길 때마다 카드&nbsp;3장&nbsp;중&nbsp;1장을 골라 스킬을 모으세요.</span>
+        <span>200웨이브를 버티면 승리합니다.</span>
+      </p>
       <div class="btn-row">
         <button class="btn-main" id="startBtn">시작</button>
       </div>
@@ -75,9 +79,15 @@
       <div class="metas">
         <div class="set-row"><b>배경음악</b><button class="set-toggle" id="soundBtn" aria-pressed="true">켜짐</button></div>
         <div class="set-row"><b>자동 게임시작</b><button class="set-toggle" id="autoBtn" aria-pressed="false">꺼짐</button></div>
+        <button class="btn-sub" id="patchBtn">패치노트</button>
         <button class="btn-sub set-giveup" id="giveupBtn">포기하고 로비로</button>
       </div>
       <button class="btn-sub" id="settingsClose">닫기</button>
+    </div>
+    <div class="overlay hidden" id="patchOv" role="dialog" aria-labelledby="patchTitle">
+      <h2 id="patchTitle">업데이트 소식</h2>
+      <div class="patch" id="patchBody"></div>
+      <button class="btn-main" id="patchClose">확인</button>
     </div>
   </main>
 
