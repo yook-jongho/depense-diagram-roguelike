@@ -12,8 +12,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="./assets/도형 방어-NvfnGlop.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/도형 방어-DxkK9Yx7.css">
+  <script type="module" crossorigin src="./assets/도형 방어-DuVah8Oh.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/도형 방어-FJKSgBIt.css">
 </head>
 <body>
 <div class="app">
@@ -61,6 +61,18 @@
         <div><span>보스 처치</span><span id="rBoss">0</span></div>
         <div><span>고른 카드</span><span id="rCards">0</span></div>
       </div>
+      <div class="log" id="logBox">
+        <div class="log-sum">
+          <div><span>총 피해</span><b id="logTot">0</b></div>
+          <div><span>최대 한 방</span><b id="logMax">0</b></div>
+        </div>
+        <div class="log-head"><b>전투 기록</b><span>스킬별 피해</span></div>
+        <div id="logRows"></div>
+        <div class="log-extra"><span>치명타로 더 들어간 피해</span><b id="logCrit">0</b></div>
+        <div class="log-extra"><span>보스에게 준 피해</span><b id="logBoss">0</b></div>
+        <div class="log-head log-cards-head"><b>고른 카드</b><span id="logCardN"></span></div>
+        <div class="log-cards" id="logCards"></div>
+      </div>
       <div class="rank hidden" id="rankBox">
         <form class="rank-form" id="rankForm" novalidate>
           <input id="rankName" maxlength="12" placeholder="닉네임" autocomplete="off" enterkeyhint="send" aria-label="닉네임" aria-describedby="rankNote">
@@ -78,6 +90,7 @@
       <h2 id="cardTitle">웨이브 돌파</h2>
       <p>카드 1장을 고르세요. 이번 판 동안 유지됩니다.</p>
       <div class="cards" id="cards"></div>
+      <button class="btn-sub hidden" id="rerollBtn" type="button">다시 뽑기</button>
     </div>
     <div class="overlay hidden" id="settingsOv" role="dialog" aria-label="설정">
       <h2>설정</h2>
